@@ -2,22 +2,40 @@
     "CubeAgent": {
         "checkpoints": [
             {
-                "steps": 421462,
-                "file_path": "results\\Test1\\CubeAgent\\CubeAgent-421462.onnx",
-                "reward": -0.4913712032113994,
-                "creation_time": 1743519250.4471483,
+                "steps": 499983,
+                "file_path": "results\\Test1\\CubeAgent\\CubeAgent-499983.onnx",
+                "reward": 4.894120235443115,
+                "creation_time": 1745849900.8231888,
                 "auxillary_file_paths": [
-                    "results\\Test1\\CubeAgent\\CubeAgent-421462.pt"
+                    "results\\Test1\\CubeAgent\\CubeAgent-499983.pt"
+                ]
+            },
+            {
+                "steps": 999949,
+                "file_path": "results\\Test1\\CubeAgent\\CubeAgent-999949.onnx",
+                "reward": -1.6519999504089355,
+                "creation_time": 1745850283.2178788,
+                "auxillary_file_paths": [
+                    "results\\Test1\\CubeAgent\\CubeAgent-999949.pt"
+                ]
+            },
+            {
+                "steps": 1000013,
+                "file_path": "results\\Test1\\CubeAgent\\CubeAgent-1000013.onnx",
+                "reward": -1.6519999504089355,
+                "creation_time": 1745850283.2620058,
+                "auxillary_file_paths": [
+                    "results\\Test1\\CubeAgent\\CubeAgent-1000013.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 421462,
+            "steps": 1000013,
             "file_path": "results\\Test1\\CubeAgent.onnx",
-            "reward": -0.4913712032113994,
-            "creation_time": 1743519250.4471483,
+            "reward": -1.6519999504089355,
+            "creation_time": 1745850283.2620058,
             "auxillary_file_paths": [
-                "results\\Test1\\CubeAgent\\CubeAgent-421462.pt"
+                "results\\Test1\\CubeAgent\\CubeAgent-1000013.pt"
             ]
         }
     },
