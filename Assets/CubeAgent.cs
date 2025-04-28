@@ -15,16 +15,13 @@ public class CubeAgent : Agent
 
 
     //rewards
-    public float rewardForSurvivingObstacle = 0.1f;
     public float rewardforLiving = 0.001f;
     public float FinishWithouthGettinghitReward = 1f;
     //penalty
-    public float penaltyForFalling = -1f;
     public float penaltyForHittingObstacle = -2f;
-    public float penaltyForjumping = 0.05f;
+    public float penaltyForjumping = -0.001f;
 
 
-    private Vector3 previousPosition;
     private Rigidbody rb;
 
 
@@ -44,7 +41,6 @@ public class CubeAgent : Agent
 
         rb = GetComponent<Rigidbody>();
 
-        previousPosition = this.transform.localPosition;
         episodeTimer = maxEpisodeTime;
 
     }
@@ -83,21 +79,6 @@ public class CubeAgent : Agent
             AddReward(FinishWithouthGettinghitReward);
             EndEpisode();
         }
-
-
-
-        // Update previous position
-        previousPosition = this.transform.localPosition;
-
-
-
-        // gevallen
-        if (this.transform.localPosition.y < 0)
-        {
-            AddReward(penaltyForFalling);
-            EndEpisode();
-        }
-
 
         //living reward
         AddReward(rewardforLiving);
