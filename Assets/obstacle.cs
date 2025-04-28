@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class obstacle : MonoBehaviour
@@ -7,10 +8,12 @@ public class obstacle : MonoBehaviour
     public float moveDistance = 10f;
     public Transform player;
     private Vector3 startPosition;
+    private bool isResetting = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        speed = Random.Range(5, 10); 
         startPosition = transform.position;
     }
 
@@ -18,19 +21,23 @@ public class obstacle : MonoBehaviour
     void Update()
     {
 
-        transform.Translate(Vector3.left * speed * Time.deltaTime);
+        transform.Translate(Vector3.right * speed * Time.deltaTime);
 
-        if (Vector3.Distance(startPosition, transform.position) >= moveDistance)
+
+
+        if (player.position.z > transform.position.z && !isResetting)
         {
-            // Reset the position back to the start
-            transform.position = startPosition;
+            StartCoroutine(ResetAfterDelay(1f)); 
         }
 
-        if (player.position.x > transform.position.x) 
-        {
-            transform.position = startPosition;
-        }
+    }
 
+    private IEnumerator ResetAfterDelay(float delay)
+    {
+        isResetting = true;
+        yield return new WaitForSeconds(delay);
+        transform.position = startPosition;
+        isResetting = false;
     }
 
 }
