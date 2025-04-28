@@ -132,13 +132,14 @@ GameObject:
   - component: {fileID: 372882795}
   - component: {fileID: 372882794}
   - component: {fileID: 372882797}
+  - component: {fileID: 372882798}
   m_Layer: 0
   m_Name: Obstacle
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &372882793
 Transform:
   m_ObjectHideFlags: 0
@@ -255,6 +256,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &372882798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372882792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf315d06ad30144589a51c0842302bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  moveDistance: 40
+  player: {fileID: 1534302230}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,6 +493,11 @@ MonoBehaviour:
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
   m_StartVerticalOffset: 0
   m_EndVerticalOffset: 0
+--- !u!4 &1534302230 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2783892005938980626, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
+  m_PrefabInstance: {fileID: 4596275893432485509}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1870888766 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 147313333927355814, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
@@ -592,6 +613,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 945945520454530835, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 1336775484392445817, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
       propertyPath: m_Name
       value: TrainingArea
@@ -706,7 +731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5849489883302148656, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
       propertyPath: m_Constraints
-      value: 0
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 8456590737396842179, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
       propertyPath: Target

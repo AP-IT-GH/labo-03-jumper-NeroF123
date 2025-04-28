@@ -19,6 +19,7 @@ public class CubeAgent : Agent
     //penalty
     public float penaltyForFalling = -1f;
     public float penaltyForTimeout = -1f;
+    public float penaltyForHittingObstacle = -1f;
 
     //add small rewards for getting closer, make them aware of distance later too
     public float distanceMultiplier = 0.1f;
@@ -52,7 +53,7 @@ public class CubeAgent : Agent
         sensor.AddObservation(this.transform.localPosition);
         sensor.AddObservation(TargetZone.localPosition);
 
-
+        sensor.AddObservation(IsGrounded());
 
         //disttances
         sensor.AddObservation(Vector3.Distance(this.transform.localPosition, TargetZone.localPosition));
@@ -140,15 +141,32 @@ public class CubeAgent : Agent
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Zone")) // Make sure TargetZone GameObject has the "Zone" tag
+        if (other.CompareTag("Zone"))
         {
             Debug.Log("Reached Target Zone (Trigger)!");
             AddReward(rewardForTargetZone);
             EndEpisode();
         }
 
+        if (other.CompareTag("Obstacle")) 
+        {
+            Debug.Log("Hit Obstacle!");
+            AddReward(penaltyForHittingObstacle);
+
+        }
+
     }
 
+    private bool IsGrounded()
+    {
+        if (Mathf.Abs(rb.linearVelocity.y) < 0.01f)
+        {
+            return true;
+        }
+
+        return false;
+
+    }
 
 
 }
