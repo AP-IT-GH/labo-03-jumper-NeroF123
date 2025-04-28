@@ -498,37 +498,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2783892005938980626, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
   m_PrefabInstance: {fileID: 4596275893432485509}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1870888766 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 147313333927355814, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
-  m_PrefabInstance: {fileID: 4596275893432485509}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1870888767 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3862570995560207206, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
-  m_PrefabInstance: {fileID: 4596275893432485509}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1870888771
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870888766}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 10, y: -1.14, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &4596275893432485509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -703,11 +672,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4452506121192953958, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4452506121192953958, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
       propertyPath: m_BrainParameters.VectorActionSize.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4452506121192953958, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
       propertyPath: 'm_BrainParameters.VectorActionSize.Array.data[0]'
@@ -731,7 +700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4452506121192953958, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
       propertyPath: m_BrainParameters.m_ActionSpec.m_NumContinuousActions
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4452506121192953958, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
       propertyPath: 'm_BrainParameters.m_ActionSpec.BranchSizes.Array.data[0]'
@@ -772,7 +741,7 @@ PrefabInstance:
     - target: {fileID: 8456590737396842179, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
       propertyPath: TargetZone
       value: 
-      objectReference: {fileID: 1870888767}
+      objectReference: {fileID: 0}
     - target: {fileID: 8456590737396842179, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
       propertyPath: targetTime
       value: 60
@@ -781,6 +750,7 @@ PrefabInstance:
     - {fileID: 8456590737396842179, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
     m_RemovedGameObjects:
     - {fileID: 4772658663713815234, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
+    - {fileID: 147313333927355814, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 473304909804220983, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
       insertIndex: -1
@@ -789,9 +759,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 945945520454530835, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1534302229}
-    - targetCorrespondingSourceObject: {fileID: 147313333927355814, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1870888771}
   m_SourcePrefab: {fileID: 100100000, guid: b4d3d6aab65289249801beae370deb5f, type: 3}
 --- !u!4 &4596275893432485510 stripped
 Transform:
